@@ -1,0 +1,43 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.iconos {
+    padding: 8rem 0 0 0;
+
+    &__titulo {
+        text-align: center;
+        color: v.$primario;
+        padding-bottom: 8rem;
+    }
+
+    &__grid {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.icono {
+    padding: 1.5rem;
+    background-color: v.$primario;
+    text-align: center;
+    border-radius: 10%;
+    transition-property: transform;
+    transition-duration: .5s;
+
+    @include m.tablet { 
+        padding: 4rem;
+        border-radius: 25%;
+    }
+
+    &:hover {
+        transform: rotate(360deg);
+    }
+
+    &-invisible {
+        display: none;
+
+        @include m.tablet { 
+            display: inherit;
+        }
+    }
+}

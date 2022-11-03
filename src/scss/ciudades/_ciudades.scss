@@ -1,0 +1,46 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.ciudades {
+    background-color: v.$primario;
+    padding-bottom: 5rem;
+
+    &__titulo {
+        text-align: center;
+        margin-top: -3rem;
+        padding: 4rem 0;
+        color: v.$blanco;
+    }
+}
+
+.contenedor-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+}
+
+.card {
+    position: relative;
+
+    &__titulo {
+        font-size: 2.5rem;
+        color: v.$blanco;
+        margin: 0;
+        font-size: v.$fuenteHeading;
+        border-bottom: 2px solid v.$primario;
+        border-top: 2px solid v.$primario;
+        font-weight: bold;
+    }
+
+    &__info {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+    }
+
+    img {
+        height: 20rem;
+        width: 40rem;
+        margin: 0 auto;
+    }
+}
